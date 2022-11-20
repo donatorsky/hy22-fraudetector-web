@@ -84,11 +84,53 @@
 					</a>
 
 					<ul class="dropdown-menu dropdown-menu-end">
-						<li><a class="dropdown-item" href="#">Dodaj ocenę</a></li>
+						<li><a href="#" class="dropdown-item" [class.disabled]="row.rate === true" (click)="row.rate !== true && onSubmitMarkAsCorrect(row.id)">
+							<span data-feather="check-circle" style="height: 14px; width: 14px; vertical-align: 3px;" class="align-text-bottom mw-0 me-1 px-0"></span>
+							Oznacz jako właściwy
+						</a></li>
+						<li><a href="#" class="dropdown-item" [class.disabled]="row.rate === false" (click)="row.rate !== false && onSubmitMarkAsIncorrect(row.id)">
+							<span data-feather="x-circle" style="height: 14px; width: 14px; vertical-align: 3px;" class="align-text-bottom mw-0 me-1 px-0"></span>
+							Oznacz jako niewłaściwy
+						</a></li>
 					</ul>
 				</div>
 			</td>
 		</tr>
 		</tbody>
+
+		<tfoot>
+		<tr>
+			<td colspan="7">
+				<button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#createFormModal">
+					<span data-feather="plus" class="align-text-bottom"></span>
+					<span style="vertical-align: 3px">Dodaj wpis ręcznie</span>
+				</button>
+			</td>
+		</tr>
+		</tfoot>
 	</table>
+</div>
+
+<div class="modal fade" id="createFormModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="exampleModalLabel">Ręczne dodawanie wpisu</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<form [formGroup]="createForm" (ngSubmit)="onSubmitCreateForm()" id="createForm">
+				<div class="modal-body">
+					<label class="form-label" for="first-author">Autor:</label>
+					<input id="first-author" class="form-control" type="text" formControlName="author" required/>
+
+					<label class="form-label" for="last-contents">Last Name:</label>
+					<textarea id="last-contents" class="form-control" formControlName="contents" rows="10" required></textarea>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+					<button type="submit" class="btn btn-primary" [disabled]="!createForm.valid">Dodaj wpis</button>
+				</div>
+			</form>
+		</div>
+	</div>
 </div>

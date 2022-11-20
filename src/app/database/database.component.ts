@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
 import * as feather from 'feather-icons';
 
 @Component({
@@ -66,6 +67,11 @@ export class DatabaseComponent {
 	];
 	showHideMoreMap: { [key: string]: boolean } = {}
 
+	createForm = new FormGroup({
+		author: new FormControl(''),
+		contents: new FormControl(''),
+	});
+
 	ngAfterViewInit() {
 		feather.replace();
 	}
@@ -82,6 +88,21 @@ export class DatabaseComponent {
 		this.showHideMoreMap[id] = id in this.showHideMoreMap
 			? !this.showHideMoreMap[id]
 			: true;
+	}
+
+	onSubmitCreateForm() {
+		console.log(this.createForm.getRawValue());
+		this.createForm.reset();
+	}
+
+	onSubmitMarkAsCorrect(id: number) {
+		console.log('onSubmitMarkAsCorrect', id);
+		this.createForm.reset();
+	}
+
+	onSubmitMarkAsIncorrect(id: number) {
+		console.log('onSubmitMarkAsIncorrect', id);
+		this.createForm.reset();
 	}
 }
 

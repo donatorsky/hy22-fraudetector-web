@@ -8,6 +8,7 @@ import {HeaderComponent} from './header/header.component';
 import {DatabaseComponent} from './database/database.component';
 import {StatsComponent} from './stats/stats.component';
 import {SettingsComponent} from './settings/settings.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
 	declarations: [
@@ -20,7 +21,8 @@ import {SettingsComponent} from './settings/settings.component';
 	],
 	imports: [
 		BrowserModule,
-		AppRoutingModule
+		AppRoutingModule,
+		ReactiveFormsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
