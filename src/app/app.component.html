@@ -5,74 +5,7 @@
 		<app-navbar></app-navbar>
 
 		<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-			<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-				<h1 class="h2">Baza postów</h1>
-				<div class="btn-toolbar mb-2 mb-md-0">
-					<div class="input-group me-2">
-						<div class="input-group-text" id="btnGroupAddon"><span data-feather="search" class="align-text-bottom"></span></div>
-						<input type="text" class="form-control" placeholder="Szukaj" aria-label="Szukaj" aria-describedby="btnGroupAddon">
-					</div>
-
-					<div class="btn-group me-2" role="group">
-						<button type="button" class="btn btn-outline-secondary bg-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-							<span data-feather="user" class="align-text-bottom"></span>
-							Autor
-						</button>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Dropdown link</a></li>
-							<li><a class="dropdown-item" href="#">Dropdown link</a></li>
-						</ul>
-					</div>
-
-					<div class="btn-group" role="group">
-						<button type="button" class="btn btn-outline-secondary bg-white dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-							<span data-feather="calendar" class="align-text-bottom"></span>
-							Ostatnie 30 dni
-						</button>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Dropdown link</a></li>
-							<li><a class="dropdown-item" href="#">Dropdown link</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="table-responsive">
-				<table class="table table-striped table-hover table-bordered">
-					<thead class="table-light">
-					<tr>
-						<th>Autor</th>
-						<th>Treść posta</th>
-						<th>Źródło</th>
-						<th>Wiarygność</th>
-						<th style="width: 75px">Link</th>
-						<th>Ocena</th>
-					</tr>
-					</thead>
-
-					<tbody>
-					<tr>
-						<td>
-							<img class="img-thumbnail" alt="GPW" style="width: 25px; height: 25px"/>
-							GPW
-						</td>
-						<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque deserunt facere, fugit hic iste molestiae nam perferendis quas sapiente sit sunt tempore temporibus voluptate! Consequuntur distinctio est omnis sed tenetur!</td>
-						<td>Twitter</td>
-						<td><span class="badge text-bg-success">72,3%</span></td>
-						<td>
-							<span data-feather="link" style="height: 14px" class="align-text-bottom"></span>
-							<a href="#">Link</a>
-						</td>
-						<td>
-							<span class="badge text-bg-success">
-								<span data-feather="check-circle" style="height: 14px; width: 14px" class="align-text-bottom mw-0 me-1 px-0"></span>
-								Właściwy
-							</span>
-						</td>
-					</tr>
-					</tbody>
-				</table>
-			</div>
+			<router-outlet></router-outlet>
 		</main>
 	</div>
 </div>

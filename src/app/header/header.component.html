@@ -7,21 +7,24 @@
 	<input class="form-control form-control-dark rounded-0 border-0" type="text" placeholder="Wyszukaj, tag, autora, treść" aria-label="Wyszukaj, tag, autora, treść">
 
 	<div class="d-flex align-items-center" role="search">
-		<a href="#" class="mx-1 px-1">
-			<i data-feather="mail" style="color: #F1F5F9;"></i>
+		<a href="#" class="mw-3 px-1">
+			<i data-feather="mail" style="color: #F1F5F9; height: 1rem;"></i>
 		</a>
-		<a href="#" class="mx-1 px-1">
-			<i data-feather="bell" style="color: #F1F5F9;"></i>
+		<a href="#" class="mw-1 me-3 px-1 position-relative">
+			<i data-feather="bell" style="color: #F1F5F9; height: 1rem;"></i>
+			<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+				1
+				<span class="visually-hidden">unread messages</span>
+			</span>
 		</a>
 		<div class="dropdown text-nowrap">
-			<a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-				Dropdown link
+			<a class="btn text-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				<img src="assets/avatar.png" alt="Ja" style="width: 32px; height: 32px; vertical-align: -8px;"/>
 			</a>
 
-			<ul class="dropdown-menu">
-				<li><a class="dropdown-item" href="#">Action</a></li>
-				<li><a class="dropdown-item" href="#">Another action</a></li>
-				<li><a class="dropdown-item" href="#">Something else here</a></li>
+			<ul class="dropdown-menu dropdown-menu-end">
+				<li><a class="dropdown-item" href="#">Moje konto</a></li>
+				<li><a class="dropdown-item" href="#">Wyloguj się</a></li>
 			</ul>
 		</div>
 	</div>

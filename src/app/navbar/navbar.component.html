@@ -2,19 +2,20 @@
 	<div class="position-sticky pt-3 sidebar-sticky">
 		<ul class="nav flex-column p-3">
 			<li class="nav-item">
-				<a class="nav-link d-flex align-middle active" aria-current="page" href="#">
+				<a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+true}" class="nav-link d-flex align-middle" aria-current="page" href="#">
 					<span data-feather="list" class="feather me-1"></span>
 					<span style="margin-top: 0.125rem">Baza postów</span>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link d-flex align-middle" href="#">
+				<a routerLink="/stats" routerLinkActive="active" class="nav-link d-flex align-middle" href="#">
 					<span data-feather="bar-chart" class="feather me-1"></span>
 					<span style="margin-top: 0.125rem">Statystyki</span>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link d-flex align-middle" href="#">
+				<a routerLink="/settings" routerLinkActive="active" class="nav-link d-flex align-middle" href="#">
 					<span data-feather="settings" class="feather me-1"></span>
 					<span style="margin-top: 0.125rem">Ustawienia</span>
 				</a>
